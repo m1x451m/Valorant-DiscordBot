@@ -126,7 +126,6 @@ class ValorantCog(commands.Cog, name='Valorant'):
 
     @app_commands.command(description="Shows your daily store in your accounts")
     @app_commands.describe(username='Input username (without login)', password='password (without login)')
-    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def store(self, interaction: Interaction, username: str = None, password: str = None) -> None:
 
@@ -156,7 +155,6 @@ class ValorantCog(commands.Cog, name='Valorant'):
         )
 
     @app_commands.command(description='View your remaining Valorant and Riot Points (VP/RP)')
-    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def point(self, interaction: Interaction, username: str = None, password: str = None) -> None:
 
@@ -261,7 +259,6 @@ class ValorantCog(commands.Cog, name='Valorant'):
     # inspired by https://github.com/giorgi-o
     @app_commands.command(description="inspect a specific bundle")
     @app_commands.describe(bundle="The name of the bundle you want to inspect!")
-    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def bundle(self, interaction: Interaction, bundle: str) -> None:
 
