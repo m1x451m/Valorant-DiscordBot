@@ -126,7 +126,7 @@ class ValorantCog(commands.Cog, name='Valorant'):
 
     @app_commands.command(description="Shows your daily store in your accounts")
     @app_commands.describe(username='Input username (without login)', password='password (without login)')
-    @app_commands.guild_only()
+    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def store(self, interaction: Interaction, username: str = None, password: str = None) -> None:
 
@@ -156,7 +156,7 @@ class ValorantCog(commands.Cog, name='Valorant'):
         )
 
     @app_commands.command(description='View your remaining Valorant and Riot Points (VP/RP)')
-    @app_commands.guild_only()
+    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def point(self, interaction: Interaction, username: str = None, password: str = None) -> None:
 
@@ -261,7 +261,7 @@ class ValorantCog(commands.Cog, name='Valorant'):
     # inspired by https://github.com/giorgi-o
     @app_commands.command(description="inspect a specific bundle")
     @app_commands.describe(bundle="The name of the bundle you want to inspect!")
-    @app_commands.guild_only()
+    # @app_commands.guild_only()
     # @dynamic_cooldown(cooldown_5s)
     async def bundle(self, interaction: Interaction, bundle: str) -> None:
 
@@ -357,7 +357,7 @@ class ValorantCog(commands.Cog, name='Valorant'):
 
     @app_commands.command(description='The command debug for the bot')
     @app_commands.describe(bug="The bug you want to fix")
-    @app_commands.guild_only()
+    # @app_commands.guild_only()
     @owner_only()
     async def debug(
         self, interaction: Interaction, bug: Literal['Skin price not loading', 'Emoji not loading', 'Cache not loading']
